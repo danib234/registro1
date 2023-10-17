@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block title %} Registro {% endblock %}
+
+{% block content %}
+
+    <div class="registro">
+    
+        
+        <form class=form action="/registro" method="POST">
+
+            <h1 class="form_titulo">Registro</h1><br>
+
+            <div class="form-group">
+                <label>Nombre usuario:</label>
+                <input type="text" class="form-input" name="name" required>
+            </div>
+            <div class="form-group">
+                <label>nombre completo:</label>
+                <input type="text" class="form-input" name="fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label>Contraseña:</label>
+                <input type="password" class="form-input" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <button class="boton">Registrar</button>
+            </div>
+
+        </form>
+
+        <div class="img">
+            <img src="{{url_for('static', filename='img/logo.png')}}"  width=400px height=520px class="logo4" >
+        </div>
+
+    </div>
+
+{% endblock %}

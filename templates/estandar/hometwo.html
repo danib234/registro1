@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    
+</head>
+<body>
+    <div class="camara">
+        
+        <body class = "container-c">
+            
+            <img src="{{ url_for('video_feed') }}">
+        
+        <div class="loader"id="loader">
+            <h2>ejercicios de extremidades superiores {{ej}}</h2>
+        
+            <div class="color-selected" style="width: 630px; height: 50px; background-color: #06C5CF;display: flex;align-items: center;justify-content: center;" >
+                <div id="red" style="background: #c3d8ec;width: 20px;
+                height: 20px;
+                border-radius: 20px;
+                cursor:pointer; text-align: center;">1</div>
+                <div id="blue"style="background: #c3d8ec;width: 20px;
+                height: 20px;
+                border-radius: 20px;
+                cursor:pointer;text-align: center;">2</div>
+                <div id="black"style="background: #c3d8ec;width: 20px;
+                height: 20px;
+                border-radius: 20px;
+                cursor:pointer;text-align: center;">3</div>
+            </div>
+
+            <div>
+                <img src="./static/ej1.gif"id=gif1 style="height: 400px; width: 600px;">
+
+            </div>
+            
+            <form class=form action="/volver" >
+                <button class="boton">volver</button>
+            </form>
+            <script>
+               let redBtn=document.getElementById("red");
+               let blueBtn=document.getElementById("blue");
+               let blackBtn=document.getElementById("black");
+               let imgchange = document.getElementById("gif1");
+               redBtn.onclick = function(){
+                  imgchange.src = "./static/ej1.gif";
+               }
+               blueBtn.onclick = function(){
+                imgchange.src = "./static/ej2.gif";
+               }
+               blackBtn.onclick =function(){
+                imgchange.src = "./static/ej3a.gif";
+
+               }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

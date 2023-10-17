@@ -1,0 +1,42 @@
+{% extends 'layout.html' %} 
+{% block title %} Login {% endblock %}
+
+{% block content %}
+    <section class="pincipal">
+        <div class="login">
+            
+            <form class= "form1" action="/login" method="POST">
+                
+                <div class="col-md-10 mx-auto col-lg-5">
+                    <form class="p-4 p-md-5 border rounded-3 bg-light">
+                        
+                        <h3>BIENVENIDO</h3>
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="username" placeholder="email" required>
+                        <label for="floatingInput"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ingrese su usuario</font></font></label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control" name="password" placeholder="password" required>
+                        <label for="floatingPassword"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ingrese su contraseña</font></font></label>
+                      </div>
+                      <div class="checkbox mb-3">
+                        <label>
+                          <input type="checkbox" value="remember-me"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Acuérdate de mí
+                        </font></font></label>
+                      </div>
+                      <button class="boton" type="submit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Login</font></font></button>
+                      <hr class="my-4">
+                      <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Al hacer clic en Registrarse, acepta los términos de uso.</font></font></small>
+                    </form>
+                  </div>
+                        
+                    
+                </form>
+
+            
+
+        </div>
+    </div>
+
+
+{% endblock %}

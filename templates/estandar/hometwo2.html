@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    
+</head>
+<body>
+    <div class="camara">
+        
+        <body class = "container-c">
+            
+            <img src="{{ url_for('video_feed2') }}">
+        
+            <div class="loader"id="loader">
+                <h2>ejercicios de extremidades cervicales</h2>
+            
+                <div class="color-selected" style="width: 630px; height: 50px; background-color: #06C5CF;display: flex;align-items: center;justify-content: center;" >
+                    <div id="red" style="background: #c3d8ec;width: 30px;
+                    height: 30px;
+                    border-radius: 30px; text-align: center;
+                    cursor:pointer;">1</div>
+                    <div id="blue"style="background: #c3d8ec;width: 30px;
+                    height: 30px;
+                    border-radius: 30px; text-align: center;
+                    cursor:pointer;">2</div>
+                    <div id="black"style="background: #c3d8ec;width: 30px;
+                    height: 30px;
+                    border-radius: 30px; text-align: center;
+                    cursor:pointer;">3</div>
+                    <div id="bl"style="background: #c3d8ec;width: 30px;
+                    height: 30px;
+                    border-radius: 30px; text-align: center;
+                    cursor:pointer;">4</div>
+                </div>
+    
+                <div>
+                    <img src="./static/ej6.gif"id=gif1 style="height: 400px; width: 600px;">
+    
+                </div>
+                
+                <form class=form action="/volver2" >
+                    <button class="boton">volver</button>
+                </form>
+                <script>
+                   let redBtn=document.getElementById("red");
+                   let blueBtn=document.getElementById("blue");
+                   let blackBtn=document.getElementById("black");
+                   let blBtn=document.getElementById("bl");
+                   let imgchange = document.getElementById("gif1");
+                   redBtn.onclick = function(){
+                      imgchange.src = "./static/ej6.gif";
+                   }
+                   blueBtn.onclick = function(){
+                    imgchange.src = "./static/ej7.gif";
+                   }
+                   blackBtn.onclick =function(){
+                    imgchange.src = "./static/ej8.gif";
+    
+                   }
+                   blBtn.onclick =function(){
+                    imgchange.src = "./static/ej5.gif";
+    
+                   }
+                </script>
+            </div>
+    </div>
+</body>
+</html>
